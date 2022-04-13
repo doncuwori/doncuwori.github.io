@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*columnnya dibagi 2, 50% 50%*/
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================ NAV ================ */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 15px 30px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+.nav_logo {
+    color: black;
+    font-weight: 800;
+    text-decoration: none; /* u ilangin garis bawah link */ 
+    font-size: 30px;
+    letter-spacing: 2px; /* jarak antar huruf */
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 50px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 9px 20px;
+    border-radius: 100px;
+    color: brown;
+}
+
+header ul li a:hover {
+    color: #282828;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.container-shape .shape {
+    width: initial; /* gambar sesuai dengan default value atau ukuran dia sebenarnya*/
+    background: transparent;
+    opacity: 0.3;
+    position: absolute; /*supaya gambarnya ada di belakang tulisan (section yang lain) & biar bisa dipindah2in*/
+    height: 300px ;
+}
+
+header .bunga {
+    right: 30%;
+    top: 55%;
+}
+
+header .bunga2 {
+    right: 10%;
+    top: 15%;
+}
+/* ================= END NAV ================= */
+
+
+/* ================== HOME ==================== */
+.header-content {
+    background-color: antiquewhite;
+}
+
+.header-content .container.grid-2 {
+    grid-template-columns: 1.5fr 3.5fr ;
+    min-height: calc(100vh - 6rem); /* 100vh tinggi dari atas(nav bar) - akhir header content, 6 rem tinggi navbar) */
+    padding-bottom: 2.5rem;
+    padding: 0rem 3.5rem;
+}
+
+.column-1 .img-element {
+    margin: 100px 0px;
+    width: 600px;
+    height: 600px;
+}
+
+.column-1 {
+    margin-left: 50px;
+}
+
+.column-2 {
+    text-align: center;
+}
+
+.column-2 h1.name {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.column-2 .p {
+    font-size: 20px;
+}
+/* ========== END HOME ========= */
+
+/*
+header .persegi{
+    right: 80%;
+    top: 30%;
+}
+
+header .persegi2{
+    right: 80%;
+    top: 25%;
+}
+*/
+
+/* ================ ABOUT ME ================ */
+.about.section {
+    background-color: linen;
+    padding: 5rem 0;
+    min-height: 100vh;
+}
+
+.section-header {
+    padding-top: 2.5rem;
+}
+
+.title-abt {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.img-abt {
+    width: 370px;
+    border-radius: 500px;
+    position: relative;
+    left: 7rem;
+    bottom: 2rem;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 12.5rem;
+    right: 15.5rem;
+}
+
+.icon {
+    display: flex;
+    margin-left: 5.6rem;
+    height: 1rem;
+    font-size: 40px;
+}
+
+.icon a{
+    color:black;
+}
+
+.icon a:hover{
+    color: saddlebrown;
+}
+
+
+.column-2.isi {
+    text-align: center;
+    line-height: 30px;
+    margin: 1.5rem 0rem;
+}
+
+.column-2.isi p {
+    text-align: justify;
+    padding-right: 9rem;
+}
+
+.column-2.isi .text {
+    margin: 2.5rem 0; /*jarak antar text about dgn download cv*/
+}
+
+.column-2.isi a{
+    position: relative;
+    right: 3.5rem;
+}
+
+.btn {
+    display: inline-block; /* biar bisa dikasih margin dan padding (kalo by default inline gabisa)*/
+    padding: .85rem 2rem;
+    background-color: rgb(165, 97, 66);
+    color: #101010;
+    border-radius: 2rem;
+    border: 1px solid #101010;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    border: solid saddlebrown;
+    background-color: transparent;
+    color: saddlebrown;
+}
+
+.fas {
+    background-color: transparent;
+}
+/* ================ END ABOUT ================ */
+
+
+/* ================ BAGIAN PORTOFOLIO ================ */
+.porto.section{
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    min-height: 110vh;
+    margin: 0;
+    padding: 1rem;
+    line-height: 1.5;
+    background-color: antiquewhite;
+}
+
+.card-wrapper {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+    grid-gap: 1.5rem; /* jarang antar grid*/
+    max-width: 100vw;
+    width: 120ch;
+    padding: 1rem;
+}
+
+.card{
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+    padding-bottom: 1rem;
+    overflow: hidden;
+    height: 30rem;
+    align-items: center;
+}
+
+.card .img {
+    border-radius: 0.5rem 0.5rem 0 0;
+    width: 100%;
+    height: 10rem;
+}
+
+.text-porto {
+    text-align: center;
+    line-height: 2rem;
+    margin: 0rem 1rem;
+}
+
+.card h3 {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
+
+.card a {
+    color: inherit;
+}
+
+.card a:hover {
+    color: saddlebrown;
+}
+/* ================ END PORTOFOLIO ================ */
+
+
+/* ================ BAGIAN CONTACT ================ */
+.section-isi.grid-2 {
+    grid-template-columns: 1.5fr 3.25fr ;
+}
+
+.contact.section{
+    background-color: linen;
+    padding: 3rem 0;
+}
+
+.title {
+    position: relative;
+    top: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.section-isi.grid-2 {
+    padding: 5rem 0;
+}
+
+.information-wrap {
+    padding-left: 5.5rem;
+}
+
+.information {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-left: 3rem;
+}
+
+.information .info-text {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+}
+
+.contact-icon {
+    font-size: 40px; /* untuk gedein ukuran icon*/
+}
+
+.contact-icon a{
+    color: black;
+}
+
+.contact-icon a:hover{
+    color: saddlebrown;
+}
+
+.contact-form {
+    margin-right: 10rem;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+}
+
+.input-group {
+    margin-bottom: 30px;
+    position: relative;
+    color: black;
+    letter-spacing: 1.5px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row .input-group {
+    flex-basis: 49%; /* jarak antar row*/
+}
+
+input, textarea {
+    width: 100%;
+    padding: 13px;
+    outline: 0;
+    background-color: transparent;
+    border: solid saddlebrown;
+    border-radius: 1.2rem;
+    color: black;
+}
+
+label {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    cursor: text;
+    transition: 0.2s;
+}
+
+input:focus~label, /*pas di klik tulisannya naik*/
+input:valid~label, /*pas form diisi tulisannya tetep diatas*/
+textarea:focus~label,
+textarea:valid~label {
+    top: -35px;
+    font-size: 14px ;
+}
+
+button {
+    width: 30%;
+    padding: 13px;
+    outline: none;
+    color: black;
+    font-weight: 700;
+    background-color: rgb(165, 97, 66);
+    border: 2px solid black;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    letter-spacing: 2.5px;
+}
+
+button:hover {
+    border: solid saddlebrown;
+    background-color: transparent;
+    color: saddlebrown;
+}
+
+/* ================= AKHIR CONTACT ================*/
+
+/*
+@media screen and (max-width: 768px) {
+    .nav_menu{
+        position: fixed;
+        top: 3rem;
+        right: 0;
+        width: 80%;
+        height: 100%;
+        padding: 2rem;
+        background-color: rosybrown;
+        transition: .5s;
+        backdrop-filter: blur(10px);
+
+    }
+}
+*/
+
